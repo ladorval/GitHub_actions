@@ -1,4 +1,5 @@
 name: Github Actions Test
+run-name: ${{ github.actor }} is testing out GitHub Actions.
 on: [push]
 
 jobs:
@@ -7,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run a script
-        run: echo "Hello, Github Actions!"
+        run: echo "Hello, Github Actions! From repository ${{ github.actor }}:${{ github.repository}}"
